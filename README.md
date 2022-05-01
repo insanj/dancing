@@ -4,6 +4,8 @@
 
 🚀 Try the live example here on Github Pages! [https://insanj.github.io/dancing/example/](https://insanj.github.io/dancing/example/)
 
+![](example/example.gif)
+
 ## Install
 
 Built with Typescript, compiled for use in any modern browser through the `OogyDancing.min.js` file.
