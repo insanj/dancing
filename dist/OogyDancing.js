@@ -55,7 +55,7 @@ export var OogyDancing;
                 default:
                 case OogyDancingKind.carrot:
                     this.dancingElement.style.backgroundSize = 'contain';
-                    this.dancingElement.style.backgroundImage = `url(${this.kOogyDancingCarrotBackgroundImage})`;
+                    this.dancingElement.style.backgroundImage = this._options.icon ? `url(${this._options.icon})` : `url(${this.kOogyDancingCarrotBackgroundImage})`;
                     this.dancingElement.style.animation = `${this._options.duration}ms ${this.kOogyDancingCarrotAnimationName} ease-in-out infinite`;
                     break;
             }
@@ -70,6 +70,11 @@ export var OogyDancing;
                 this.subelement.parentNode.removeChild(this.subelement);
             }
             element.prepend(this.subelement);
+        }
+        detach() {
+            if (this.subelement.parentNode) {
+                this.subelement.parentNode.removeChild(this.subelement);
+            }
         }
     }
     OogyDancing.OogyDancer = OogyDancer;

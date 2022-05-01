@@ -3,9 +3,11 @@ export declare module OogyDancing {
         readonly options: OogyDancingOptions;
         readonly attachedElement?: Element;
         attach(element: Element): void;
+        detach(): void;
     }
     type OogyDancingOptions = {
         kind: OogyDancingKind;
+        icon?: string;
         duration: number;
         width: number;
         height: number;
@@ -35,5 +37,6 @@ export declare module OogyDancing {
         private readonly kOogyDancingCarrotAnimationName;
         private prepare;
         attach(element: Element): void;
+        detach(): void;
     }
 }

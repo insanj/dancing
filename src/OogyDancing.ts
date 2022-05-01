@@ -30,6 +30,11 @@ export module OogyDancing {
      */
     attach(element: Element): void;
 
+    /**
+     * Removes any elements the dancer has added, not including any global/head-level styles.
+     */
+    detach(): void;
+
   }
 
   /**
@@ -213,6 +218,14 @@ export module OogyDancing {
       }
 
       element.prepend(this.subelement);
+
+    }
+
+    detach(): void {
+
+      if (this.subelement.parentNode) {
+        this.subelement.parentNode.removeChild(this.subelement);
+      }
 
     }
 
