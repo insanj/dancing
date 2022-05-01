@@ -17,7 +17,7 @@ export var OogyDancing;
         height: 20,
         distance: 10,
         horizontal: OogyDancingAlign.end,
-        horizontalInset: 0,
+        horizontalInset: 10,
         vertical: OogyDancingAlign.end,
         verticalInset: 20
     };

@@ -32,6 +32,8 @@ body {
 }
 
 #box {
+  position: relative;
+
   background: rgba(173, 170, 204, 0.5);
   width: calc(100% - 50px);
   height: 160px;

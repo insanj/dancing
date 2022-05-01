@@ -21,13 +21,15 @@
         OogyDancing
       } from "../dist/OogyDancing.min.js";
     
-      const element = document.getElementById("dialogue"); // make sure this element has position: relative (or its parent, or one of its children)
-      const text = "Hello, Github! This is oogy-dancing, a simple but powerful tool for web-based video games.";
-    
+      const element = document.getElementById("dialogue");
+      const text = "Hello, Github! This is oogy-dancing, another simple but powerful tool.\nSee that little carrot over there, in the lower right?\nDrop that into any element in your game or website.";
       element.innerText = text;
       
+      const container = document.getElementById("box"); 
+      // make sure this element has position: relative (or its parent, or one of its children)
+
       const dancer = new OogyDancing.OogyDancer();
-      dancer.attach(element);
+      dancer.attach(container);
     
       console.log("oogy-dancing example has started its dance", dancer, element);
     

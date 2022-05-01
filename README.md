@@ -34,18 +34,15 @@ See [example/](example/) as well as the `package.json` command `npm run example`
 
   import { 
     OogyDancing
-  } from "/dist/OogyDancing.min.js";
+  } from "../dist/OogyDancing.min.js";
 
-  const element = document.getElementById("dialogue"); // make sure this element has position: relative (or its parent, or one of its children)
-  const text = "Hello, Github! This is oogy-dancing, a simple but powerful tool for web-based video games.";
+  const container = document.getElementById("box");  // make sure this element has position: relative (or its parent, or one of its children)
 
-  element.textContent = text;
-  
   const dancer = new OogyDancing.OogyDancer();
-  dancer.attach(element);
+  dancer.attach(container);
 
   console.log("oogy-dancing example has started its dance", dancer, element);
-
+    
 </script>
 ```
 
@@ -59,7 +56,7 @@ export const kOogyDancingOptionsDefault: OogyDancingOptions = {
   height: 20,
   distance: 10,
   horizontal: OogyDancingAlign.end,
-  horizontalInset: 0,
+  horizontalInset: 10,
   vertical: OogyDancingAlign.end,
   verticalInset: 20
 }
