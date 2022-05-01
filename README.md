@@ -53,6 +53,7 @@ The default options are currently:
 ```js
 export const kOogyDancingOptionsDefault: OogyDancingOptions = {
   kind: OogyDancingKind.carrot,
+  // icon: <custom image URL to use instead of default for the kind>
   duration: 500,
   width: 20,
   height: 20,

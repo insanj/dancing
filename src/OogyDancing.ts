@@ -43,6 +43,11 @@ export module OogyDancing {
     kind: OogyDancingKind;
 
     /**
+     * Optional source URL of a replacement image to use instead of the default for the .kind
+     */
+    icon?: string;
+
+    /**
      * Duration of each individual bounce/movement in any direction.
      */
     duration: number;
@@ -183,7 +188,7 @@ export module OogyDancing {
         default:
         case OogyDancingKind.carrot:
           this.dancingElement.style.backgroundSize = 'contain';
-          this.dancingElement.style.backgroundImage = `url(${this.kOogyDancingCarrotBackgroundImage})`;
+          this.dancingElement.style.backgroundImage = this._options.icon ? `url(${this._options.icon})` : `url(${this.kOogyDancingCarrotBackgroundImage})`;
           this.dancingElement.style.animation = `${this._options.duration}ms ${this.kOogyDancingCarrotAnimationName} ease-in-out infinite`;
           break;
       }
