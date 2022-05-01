@@ -1,0 +1,29 @@
+{
+  "name": "oogy-dancing",
+  "version": "0.1.0",
+  "description": "🪩  add a dancing carrot or custom icon to an HTML element, tiny js library used for dialogue boxes in https://oogycanyouhelp.com",
+  "type": "module",
+  "main": "dist/OogyDancing.js",
+  "scripts": {
+    "start": "tsc",
+    "release": "cat dist/OogyDancing.js | tr -s '[:blank:]' | tr -d '\n' > dist/OogyDancing.min.js",
+    "example": "npm start; npm run release; echo '-> oogy-dancing example booting at localhost:4000/example/'; python3 -m http.server 4000"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insanj/dancing.git"
+  },
+  "author": "insanj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/insanj/dancing/issues"
+  },
+  "homepage": "https://github.com/insanj/dancing#readme",
+  "devDependencies": {
+    "typescript": "^4.7.0-dev.20220401"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ]
+}
